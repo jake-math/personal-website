@@ -1,23 +1,32 @@
 import React from 'react';
-import './App.css'; // Add global styles here
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
-function App() {
-  return (
-      <div className="App">
-        <Navbar />
-        <section id="home"><Home /></section>
-        <section id="about"><About /></section>
-        <section id="projects"><Projects /></section>
-        <section id="skills"><Skills /></section>
-        <section id="contact"><Contact /></section>
-      </div>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">Projects</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contact</Link>
+                    </li>
+                </ul>
+            </nav>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<Projects />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;

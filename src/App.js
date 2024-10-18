@@ -1,30 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import About from './pages/About';
 import Projects from './pages/Projects';
+import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+import './css/App.css'; // Ensure your CSS is imported
 
 const App = () => {
     return (
         <Router>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">Projects</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
-            </nav>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<Projects />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
+            <Navbar />
+            <div className="content"> {/* Added padding here */}
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/resume" element={<Resume />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+            </div>
         </Router>
     );
 };

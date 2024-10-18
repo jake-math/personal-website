@@ -1,0 +1,16 @@
+/* Navbar styles */
+header {
+    background-color: #4A4A4A; /* Dark Gray for Navbar */
+    padding: 10px 0; /* Vertical padding for the navbar */
+}
+
+.nav-links a {
+    color: #4CAF50; /* Green for text color */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 10px; /* Padding for each link */
+}
+
+.nav-links a:hover {
+    background-color: rgba(76, 175, 80, 0.2); /* Lighter green on hover */
+    border-radius: 4px; /* Rounded corners */
+}

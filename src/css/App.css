@@ -1,0 +1,58 @@
+/* App.css */
+
+/* Importing Google Fonts (Add this to your index.html <head> or at the top of your CSS file) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Setting the overall font */
+  background-color: #d1d0d0; /* Light Gray Background Color */
+  color: #2E2E2E; /* Very Dark Gray Text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #4A4A4A; /* Dark Gray Headings */
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Link Styles */
+a {
+  color: #4CAF50; /* Green for Links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on Hover */
+}
+
+.container {
+  margin: 10px; /* No outer margins */
+  padding: 10px; /* No inner padding */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Full width */
+}
+
+.content {
+  padding-left: 20px; /* Add left padding to the content */
+  padding-top: 20px; /* Optional: Top padding for spacing */
+}
+
+/* Button Styles */
+button {
+  background-color: #4CAF50; /* Green Button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker Green on Hover */
+}
